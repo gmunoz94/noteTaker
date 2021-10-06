@@ -32,6 +32,27 @@ const getNotes = () =>
       'Content-Type': 'application/json',
     },
   });
+  // .then((response) => response.json())
+  // .then((noteData) => {
+  //   console.log('noteData', noteData);
+  //   console.log('-----------------------');
+
+  //   for (let i = 0; i < noteData.length; i++) {
+  //     let listItem = document.createElement('li');
+  //     listItem.classList.add('list-group-item', 'mt-4');
+
+  //     const noteName = document.createElement('h4');
+  //     noteName.textContent = noteData[i].title;
+
+  //     const noteBody = document.createElement('p');
+  //     noteBody.textContent = noteData[i].text;
+
+  //     listItem.appendChild(noteName);
+  //     listItem.appendChild(noteBody);
+
+  //     noteList.appendChild(listItem);
+  //   }
+  // })
 
 const saveNote = (note) =>
   fetch('/api/notes', {
